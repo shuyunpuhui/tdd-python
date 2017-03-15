@@ -27,3 +27,7 @@ class TestStringCalculator(unittest.TestCase):
 
     def test_should_raise_exception_when_number_is_negative(self):
         self.assertRaises(ArgumentError, calculator.add, "-1")
+
+
+if __name__ == '__main__':
+    unittest.main()
