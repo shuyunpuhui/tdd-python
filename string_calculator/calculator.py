@@ -11,7 +11,8 @@ def add(input_string):
 
 def convert_to_numbers(input_numbers):
     if input_numbers:
-        numbers = input_numbers.split(",")
+        normalized = input_numbers.replace("\n", ",")
+        numbers = normalized.split(",")
     else:
         numbers = []
     return map(int, numbers)
