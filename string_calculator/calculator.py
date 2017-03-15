@@ -25,6 +25,8 @@ def convert_to_int(str):
     result = int(str)
     if result < 0:
         raise ArgumentError(None, "%s is a negative number!" % str)
+    if result > 1000:
+        result = 0
     return result
 
 
