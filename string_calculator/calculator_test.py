@@ -1,4 +1,6 @@
 import unittest
+from argparse import ArgumentError
+
 import calculator
 
 
@@ -19,3 +21,9 @@ class TestStringCalculator(unittest.TestCase):
 
     def test_should_consider_new_line_as_a_delimiter(self):
         self.assertEqual(10, calculator.add("1,2,3\n4"))
+
+    def test_should_work_if_using_different_delimiter(self):
+        self.assertEqual(10, calculator.add("//(*)\n1(*)2(*)3(*)4"))
+
+    def test_should_raise_exception_when_number_is_negative(self):
+        self.assertRaises(ArgumentError, calculator.add, "-1")
