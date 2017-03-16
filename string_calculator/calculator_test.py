@@ -11,7 +11,7 @@ class TestStringCalculator(unittest.TestCase):
     def test_should_return_the_number_if_input_has_only_one_number(self):
         self.assertEqual(1, calculator.add("1"))
         self.assertEqual(2, calculator.add("2"))
-        self.assertEqual(100, calculator.add("100"))
+        self.assertEqual(1100, calculator.add("1100"))
 
     def test_should_return_the_sum_if_input_has_two_numbers(self):
         self.assertEqual(3, calculator.add("1,2"))
@@ -28,5 +28,6 @@ class TestStringCalculator(unittest.TestCase):
     def test_should_raise_exception_when_number_is_negative(self):
         self.assertRaises(ArgumentError, calculator.add, "-1")
 
-    def test_should_ignore_number_greater_than_1000(self):
-        self.assertEqual(1, calculator.add("1,1001"))
+
+if __name__ == '__main__':
+    unittest.main()
