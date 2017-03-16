@@ -1,2 +1,2 @@
 def calculate(input_number):
-    return '1'
+    return str(input_number)
