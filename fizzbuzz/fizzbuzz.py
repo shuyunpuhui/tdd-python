@@ -2,5 +2,9 @@
 
 
 def calculate(input_number):
-    if input_number % 3 or input_number % 5:
-        return input_number
+    if not input_number % 3:
+        return "fizz"
+    elif not input_number % 5:
+        return "buzz"
+    else:
+        return str(input_number)
