@@ -1,13 +1,11 @@
 # -*- coding:utf-8 -*-
 
-import unittest
+from unittest import TestCase
 
 import fizzbuzz
 
 
-class FizzBuzzTest(unittest.TestCase):
-    def setUp(self):
-        pass
+class FizzBuzzTest(TestCase):
 
     def test_should_return_1_if_input_is_1(self):
         self.assertEqual("1", fizzbuzz.calculate(1))
@@ -20,3 +18,6 @@ class FizzBuzzTest(unittest.TestCase):
 
     def test_should_return_buzz_if_input_is_5(self):
         self.assertEqual("buzz", fizzbuzz.calculate(10))
+
+    def test_should_return_fizzbuzz_if_diviable_by_3_and_5(self):
+        self.assertEqual("fizzbuzz", fizzbuzz.calculate(15))
