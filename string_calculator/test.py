@@ -1,7 +1,7 @@
-
-# from __future__ import absolute_import
+from __future__ import absolute_import
 
 import unittest
+from argparse import ArgumentError
 
 import string_calculator
 
@@ -21,3 +21,17 @@ class StringCalculatorTest(unittest.TestCase):
 
     def test_should_return_sum_if_input_has_space_inside_numbers(self):
         self.assertEqual(6, string_calculator.add("1\n2,3"))
+
+    def test_should_return_sum_if_input_delimiter(self):
+        self.assertEqual(5, string_calculator.add("//;\n2;3"))
+        self.assertEqual(13, string_calculator.add("//#\n2#3#8"))
+
+    def test_should_raise_negatives_not_allowed_if_input_negatives(self):
+        self.assertRaises(ArgumentError, string_calculator.add, "1, -2")
+        self.assertRaisesRegexp(ArgumentError, "negatives:-2 not allowed", string_calculator.add, "1, -2")
+
+    def test_should_show_the_number_when_if_negative(self):
+        with self.assertRaises(Exception) as context:
+            string_calculator.add("-1")
+        self.assertIn('-1', context.exception.message)
+
