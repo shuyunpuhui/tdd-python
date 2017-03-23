@@ -29,7 +29,6 @@ The following is a TDD Kata- an exercise in coding, refactoring and test-first, 
 ####4 
     如果输入有负数，则抛出异常并提示 “negatives not allowed” 
     - 并且显示这个数字.
-    - 如果有多个负数，则显示所有负数
 
 ###### Continue if you can finish the steps so far in less than 30 minutes.
     - Numbers bigger than 1000 should be ignored, so adding 2 + 1001  = 2
