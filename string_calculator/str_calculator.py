@@ -1,2 +1,4 @@
 def add(input_str):
-    return 0
+    if not input_str:
+        return 0
+    return int(input_str)
