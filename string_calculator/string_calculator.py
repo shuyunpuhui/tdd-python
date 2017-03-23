@@ -1,13 +1,10 @@
 # -*- coding:utf-8 -*-
+from utils import *
 
 
 def add(input_string):
-    cnt = 0
-    if input_string:
-        input_list = input_string.replace("\n", ',').strip().split(",")
-        if len(input_list) == 1:
-            cnt = int(input_list[0])
-        else:
-            cnt = reduce(lambda x, y: int(x) + int(y), input_list)
+    input_list = get_list_from_str(input_string)
+    return get_sum(input_list)
 
-    return cnt
+
+
