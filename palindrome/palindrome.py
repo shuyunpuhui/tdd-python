@@ -3,4 +3,4 @@ def is_palindrome(input_str):
 
 
 def get_palindrome(num):
-    return filter(is_palindrome, range(1, num))
+    return filter(is_palindrome, map(str, range(0, num)))
