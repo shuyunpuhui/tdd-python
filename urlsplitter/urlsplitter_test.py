@@ -23,3 +23,7 @@ class UrlSplitterTest(unittest.TestCase):
 
     def test_should_return_path_if_input_url(self):
         self.assertEqual("v1", url_parser.get_path("http://www.baidu.com/v1"))
+
+    def test_should_return_protocol_domain_path_list_if_input_url(self):
+        self.assertListEqual(["http", "www.baidu.com", "v1"],
+                             url_parser.split_url_into_parts("http://www.baidu.com/v1"))
