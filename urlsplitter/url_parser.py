@@ -22,7 +22,7 @@ def get_path(url):
 
 def split_url_into_parts(url):
     all_parts = url.split(PROTOCOL_SPLIT)
-    domain_and_path = all_parts[1].split(PATH_SPLIT)
+    domain_and_path = all_parts[1].split(PATH_SPLIT, 1)
 
     return all_parts[:1] + domain_and_path
 
