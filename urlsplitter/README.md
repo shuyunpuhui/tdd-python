@@ -11,7 +11,7 @@
     "http://some.thing" 应该得到 
         protocol=="http"
         domain==some.thing
-        path=""
+        path="
         
     "ftp://a.large.site" 应该得到
         protocol=="ftp"
