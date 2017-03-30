@@ -2,7 +2,7 @@ import unittest
 import urlsplitter
 
 
-class UrlsplitterTest(unittest.TestCase):
+class UrlSplitterTest(unittest.TestCase):
     def test_should_split_correctly_baidu_url(self):
         result = urlsplitter.resolve("http://baidu.com")
         self.assertEqual("http", result.protocol)
